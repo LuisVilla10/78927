@@ -16,7 +16,7 @@ import https.t4is_uv_mx.saludos.SaludarResponse;
 @Endpoint
 public class SaludosEndPoint {
         int id=0;
-        ArrayList<BuscarSaludosResponse.Saludos> saludos = new ArrayList<BuscarSaludosResponse.Saludos>(); // Create an ArrayList object
+        ArrayList<BuscarSaludosResponse.Saludos> saludos = new ArrayList<BuscarSaludosResponse.Saludos>(); 
         @PayloadRoot(namespace = "https://t4is.uv.mx/saludos" , localPart = "SaludarRequest")
 
         @ResponsePayload
