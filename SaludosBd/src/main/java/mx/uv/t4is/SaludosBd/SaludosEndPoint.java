@@ -31,7 +31,8 @@ public class SaludosEndPoint {
     @ResponsePayload
     public SaludarResponse Saludar(@RequestPayload SaludarRequest nombre) {
         SaludarResponse respuesta = new SaludarResponse();
-        //Agreagar el saludo a una base de datos
+
+        //Se agrega el saludo a una base de datos
         respuesta.setRespuesta("Hola "+nombre.getNombre());
         Saludadores e = new Saludadores();
         e.setNombre(nombre.getNombre());
@@ -43,12 +44,12 @@ public class SaludosEndPoint {
     @ResponsePayload
     public BuscarSaludosResponse buscarSaludos(){
         BuscarSaludosResponse respuesta = new BuscarSaludosResponse();
-/*         for (Saludo saludo : saludos) {
-            BuscarSaludosResponse.Saludos saludosBuscar = new BuscarSaludosResponse.Saludos();
-            saludosBuscar.setId(saludo.getId());
-            saludosBuscar.setNombre(saludo.getNombre());
-            respuesta.getSaludos().add(saludosBuscar);
-        } */
+        //for (Saludo saludo : saludos) {
+        //BuscarSaludosResponse.Saludos saludosBuscar = new BuscarSaludosResponse.Saludos();
+        //saludosBuscar.setId(saludo.getId());
+        //saludosBuscar.setNombre(saludo.getNombre());
+        //respuesta.getSaludos().add(saludosBuscar);
+    //}
         return respuesta;
     }
 
@@ -56,11 +57,12 @@ public class SaludosEndPoint {
     @ResponsePayload
     public ModificarSaludoResponse modificar(@RequestPayload ModificarSaludoRequest peticion){       
         ModificarSaludoResponse respuesta = new ModificarSaludoResponse(); 
-/*         Saludo e = new Saludo();
-        e.setNombre(peticion.getNombre());
-        e.setId(peticion.getId());
-        saludos.set(peticion.getId()-1,e);            
-        respuesta.setRespuesta(true);    */     
+
+    //Saludo e = new Saludo();
+    //e.setNombre(peticion.getNombre());
+    //e.setId(peticion.getId());
+    //saludos.set(peticion.getId()-1,e);            
+    //respuesta.setRespuesta(true);         
         return respuesta;
     }
 
@@ -69,10 +71,10 @@ public class SaludosEndPoint {
 	public BorrarSaludoResponse modificar(@RequestPayload BorrarSaludoRequest peticion){
 		BorrarSaludoResponse respuesta = new BorrarSaludoResponse();
 		Saludos e = new Saludos();
-/* 
-		e.setId(peticion.getId());
-		saludos.remove(peticion.getId()-1);
-		respuesta.setRespuesta(true); */
+
+    //e.setId(peticion.getId());
+    //saludos.remove(peticion.getId()-1);
+    //respuesta.setRespuesta(true);
 		
 		return respuesta;
     }
